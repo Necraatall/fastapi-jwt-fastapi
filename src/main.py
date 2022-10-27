@@ -1,3 +1,6 @@
+"""
+Main module
+"""
 from http.client import HTTPException
 from fastapi import FastAPI
 from .auth import AuthHandler
@@ -9,6 +12,7 @@ app = FastAPI()
 
 auth_handler = AuthHandler()
 users = []
+
 
 @app.post('/register')
 def register(auth_details: AuthDetails):
@@ -24,7 +28,7 @@ def register(auth_details: AuthDetails):
 def login():
     '''
     Rest fastApi login service
-    '''    
+    '''
     return {}
 
 
